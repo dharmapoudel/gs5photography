@@ -1,0 +1,137 @@
+/*** ESSENTIAL STYLES ***/
+.main-nav, .main-nav * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.main-nav {
+	line-height:	1.0;
+	position:		relative;
+}
+.main-nav ul {
+	position:		absolute;
+	top:			-999em;
+	width:			200px; /* left offset of submenus need to match (see below) */
+	z-index:		10;
+}
+.main-nav ul li {
+	width:			100%;
+}
+.main-nav li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.main-nav li {
+	float:			left;
+	position:		relative;
+}
+.main-nav a {
+	display:		block;
+}
+.main-nav li:hover ul, .main-nav li.sfHover ul {
+	left:			0;
+	top:			55px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.main-nav li:hover li ul, ul.main-nav li.sfHover li ul {
+	top:			-999em;
+}
+ul.main-nav li li:hover ul, ul.main-nav li li.sfHover ul {
+	left:			200px; /* match ul width */
+	top:			0;
+}
+ul.main-nav li li:hover li ul, ul.main-nav li li.sfHover li ul {
+	top:			-999em;
+}
+ul.main-nav li li li:hover ul, ul.main-nav li li li.sfHover ul {
+	left:			200px; /* match ul width */
+	top:			0;
+}
+/*** Skin ***/
+.main-nav {
+
+	
+	/*enable this if you are using horizental menu*/
+	/*float:left; enable this if you are using vertical menu*/
+	
+}
+.main-nav li {
+	float:left;
+}
+.main-nav li a {
+	color:#fff;
+	text-decoration:none;
+	padding:23px 16px;
+	text-align:center;
+	font-weight:bold;
+        line-height: 1;
+        
+}
+.main-nav li a:hover, .main-nav li.current-menu-item a, .main-nav li:hover > a, .main-nav li.current-menu-ancestor a, .main-nav li.current-menu-parent a,
+.main-nav li.sfHover li li a:hover {
+	background-color:#fff;
+	color:#000;
+}
+
+.main-nav li a span {
+	display:block;
+	}
+
+/*Second Level*/
+
+.main-nav ul{
+	
+}
+.main-nav ul ul{
+	background:none;
+}
+.main-nav li li{
+	padding:0px;
+	background-color: #fff;
+	background-image:none;
+	height:auto;
+	border-bottom:1px solid #e8e5de;
+}
+.main-nav li li li{
+	background-color: #231f20;
+	border-bottom:1px solid #e8e5de;
+}
+
+.main-nav li li a,
+.main-nav li.sfHover li a,
+.main-nav li.current-menu-item li a,
+.main-nav li.current-menu-parent li a,
+.main-nav li.current-menu-ancestor li a,
+.main-nav li li.current-menu-item li a,
+.main-nav li li.current-menu-parent li a,
+/*3rd level*/
+.main-nav li.sfHover li li a:hover,
+.main-nav li.sfHover li li.current-menu-item a,
+.main-nav li li.current-menu-parent li.current-menu-item a
+ {
+	background-color:#eee;
+	color:#602e0f;
+	zoom:1;
+	height:auto;
+	line-height:18px;
+	padding:5px 10px;
+	font-weight:normal;
+	font-size:12px;
+	float:none;
+	display:block;
+	text-align:left;
+}
+
+.main-nav li li a:hover,
+.main-nav li li:hover > a,
+.main-nav li.sfHover li a:hover,
+.main-nav li.current-menu-item li a:hover,
+.main-nav li.current-menu-parent li a:hover,
+.main-nav li.current-menu-ancestor li a:hover,
+.main-nav li li.current-menu-item a,
+.main-nav li li.current-menu-parent a,
+.main-nav li li li.current-menu-item a,
+/*3rd level*/
+.main-nav li.sfHover li li a {
+	background-color:#ccc;
+	color:#333;
+}
